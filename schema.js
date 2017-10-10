@@ -7,13 +7,22 @@ const {
 } = require('graphql')
 const axios = require('axios')
 
+const cityType = new GraphQLObjectType({
+  name: 'cityType',
+  description: 'City Type..',
+  fields: () => ({
+    name: { type: GraphQLString },
+    population: { type: GraphQLString }
+  })
+})
+
 const countryType = new GraphQLObjectType({
   name: 'countryType',
-  description: 'Country type',
+  description: 'Country type..',
   fields: () => ({
     id: { type: GraphQLInt },
     name: { type: GraphQLString },
-    city: { type: GraphQLString }
+    cities: { type: new GraphQLList(cityType) }
   })
 })
 

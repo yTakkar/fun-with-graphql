@@ -3,27 +3,72 @@
     {
       "id": 1,
       "name": "India",
-      "city": "Bangalore"
+      "cities": [
+        {
+          "name": "Bangalore",
+          "population": "8.426 million"
+        },
+        {
+          "name": "Mumbai",
+          "population": "18.41 million"
+        }
+      ]
     },
     {
       "id": 2,
       "name": "Norway",
-      "city": "Oslo"
+      "cities": [
+        {
+          "name": "Oslo",
+          "population": "634,293"
+        },
+        {
+          "name": "Bergen",
+          "population": "265,857"
+        }
+      ]
     },
     {
       "id": 3,
       "name": "Australia",
-      "city": "Melbourne"
+      "cities": [
+        {
+          "name": "Melbourne",
+          "population": "3.848 million"
+        },
+        {
+          "name": "Brisbane",
+          "population": "1.977 million"
+        }
+      ]
     },
     {
       "id": 4,
       "name": "Canada",
-      "city": "Vancouver"
+      "cities": [
+        {
+          "name": "Vancouver",
+          "population": "647,540"
+        },
+        {
+          "name": "Toronto",
+          "population": "2.809 million"
+        }
+      ]
     },
     {
       "id": 5,
       "name": "Denmark",
-      "city": "Copenhagen"
+      "cities": [
+        {
+          "name": "Copenhagen",
+          "population": "583,525"
+        },
+        {
+          "name": "Aarhus",
+          "population": "326,612"
+        }
+      ]
     }
   ]
 }

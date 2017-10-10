@@ -1,5 +1,5 @@
 const app = require('express')()
-const PORT = 5006
+const PORT = 5005
 const expressGraphQL = require('express-graphql')
 const schema = require('./schema')
 
