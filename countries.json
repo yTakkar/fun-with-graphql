@@ -12,7 +12,8 @@
           "name": "Mumbai",
           "population": "18.41 million"
         }
-      ]
+      ],
+      "nearest": 3
     },
     {
       "id": 2,
@@ -26,7 +27,8 @@
           "name": "Bergen",
           "population": "265,857"
         }
-      ]
+      ],
+      "nearest": 5
     },
     {
       "id": 3,
@@ -40,7 +42,8 @@
           "name": "Brisbane",
           "population": "1.977 million"
         }
-      ]
+      ],
+      "nearest": 1
     },
     {
       "id": 4,
@@ -54,7 +57,8 @@
           "name": "Toronto",
           "population": "2.809 million"
         }
-      ]
+      ],
+      "nearest": 2
     },
     {
       "id": 5,
@@ -68,7 +72,8 @@
           "name": "Aarhus",
           "population": "326,612"
         }
-      ]
+      ],
+      "nearest": 2
     }
   ]
 }

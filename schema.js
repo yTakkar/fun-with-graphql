@@ -7,6 +7,11 @@ const {
 } = require('graphql')
 const axios = require('axios')
 
+const getCountry = async country => {
+  let { data } = await axios.get(`http://localhost:3000/countries/${country}`)
+  return data
+}
+
 const cityType = new GraphQLObjectType({
   name: 'cityType',
   description: 'City Type..',
@@ -22,7 +27,11 @@ const countryType = new GraphQLObjectType({
   fields: () => ({
     id: { type: GraphQLInt },
     name: { type: GraphQLString },
-    cities: { type: new GraphQLList(cityType) }
+    cities: { type: new GraphQLList(cityType) },
+    nearest: { 
+      type: countryType,
+      resolve: async d => getCountry(d.nearest)
+    }
   })
 })
 
@@ -35,17 +44,11 @@ const RootQuery = new GraphQLObjectType({
       args: {
         id: { type: GraphQLInt }
       },
-      resolve: async (root, { id }) => {
-        let { data } = await axios.get(`http://localhost:3000/countries/${id}`)
-        return data
-      }
+      resolve: async (root, { id }) => getCountry(id)
     },
     countries: {
       type: new GraphQLList(countryType),
-      resolve: async () => {
-        let { data } = await axios.get('http://localhost:3000/countries/')
-        return data
-      }
+      resolve: async () => getCountry('')
     }
   })
 })
