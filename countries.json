@@ -1,0 +1,29 @@
+{
+  "countries": [
+    {
+      "id": 1,
+      "name": "India",
+      "city": "Bangalore"
+    },
+    {
+      "id": 2,
+      "name": "Norway",
+      "city": "Oslo"
+    },
+    {
+      "id": 3,
+      "name": "Australia",
+      "city": "Melbourne"
+    },
+    {
+      "id": 4,
+      "name": "Canada",
+      "city": "Vancouver"
+    },
+    {
+      "id": 5,
+      "name": "Denmark",
+      "city": "Copenhagen"
+    }
+  ]
+}
