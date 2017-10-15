@@ -1,6 +1,6 @@
 # Fun-With-GraphQL
 
-# Usage
+### Usage
 1. First start the `json-server`.
 ```javascript
 yarn json:serve
