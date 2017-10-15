@@ -30,7 +30,7 @@ const countryType = new GraphQLObjectType({
     cities: { type: new GraphQLList(cityType) },
     nearest: { 
       type: countryType,
-      resolve: async d => getCountry(d.nearest)
+      resolve: d => getCountry(d.nearest)
     }
   })
 })
@@ -48,7 +48,7 @@ const RootQuery = new GraphQLObjectType({
     },
     countries: {
       type: new GraphQLList(countryType),
-      resolve: async () => getCountry('')
+      resolve: () => getCountry('')
     }
   })
 })
