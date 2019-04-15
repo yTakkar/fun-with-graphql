@@ -4,6 +4,7 @@ const {
   GraphQLString,
   GraphQLInt,
   GraphQLList,
+  GraphQLInputObjectType,
 } = require('graphql')
 const axios = require('axios')
 
@@ -53,6 +54,34 @@ const RootQuery = new GraphQLObjectType({
   })
 })
 
+const cityInput = new GraphQLInputObjectType({
+  name: 'cityInput',
+  description: 'City Type..',
+  fields: () => ({
+    name: { type: GraphQLString },
+    population: { type: GraphQLString }
+  })
+})
+
+const RootMutation = new GraphQLObjectType({
+  name: 'RootMutation',
+  description: 'Mutates',
+  fields: () => ({
+    addCountry: {
+      type: countryType,
+      args: {
+        id: { type: GraphQLInt },
+        name: { type: GraphQLString },
+        cities: { type: new GraphQLList(cityInput) }
+      },
+      resolve: (source, args) => {
+        console.log(source, args)
+      }
+    }  
+  })
+})
+
 module.exports = new GraphQLSchema({
-  query: RootQuery
+  query: RootQuery,
+  mutation: RootMutation
 })
