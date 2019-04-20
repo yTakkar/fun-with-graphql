@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
-    "json:serve": "json-server --watch countries.json"
+    "json:serve": "json-server --watch countries.json",
+    "deploy": "npm run json:serve && node app.js"
   },
   "author": "",
   "license": "ISC",
